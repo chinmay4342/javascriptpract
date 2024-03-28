@@ -1,0 +1,273 @@
+<!--<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    </style>
+  </head>
+  <body>
+    <label for = "username">User Name:</label>
+    <input type = "text" id = "username">
+    <button onclick = "formValidate()">Click</button>
+      <script>
+        function formValidate() {
+          let input = document.getElementById("username");
+          let username = input.value.trim();
+          if(username === ""){
+            alert("please enter the username");
+          } else {
+            alert(username)
+          }
+        }
+      </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        .bg-color {
+          background-color: green;
+          font-size: 26;
+          color: white;
+          text-align: center;
+          width: 200px;
+          border: 1px solid orange;
+          padding: 20px;
+          margin: 100px;
+        }
+    </style>
+  </head>
+  <body>
+    <p id = "para">This is paragraph tag</p>
+    <button onclick="addClass()">Click me</button>
+      <script>
+        function addClass() {
+          let para = document.getElementById("para");
+          para.classList.add("bg-color");
+        }
+      </script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+ <html>
+  <body>
+      <h1 id = "changeHI">Hi hello how are you</h1>
+      <button onclick="changeText()">Change Text</button>
+      <script>
+          function changeText(){
+            let element = document.getElementById("changeHI");
+            element.innerHTML = "Hello folks";
+          }
+      </script>
+  </body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <button onclick="togglling()">Change</button>
+    <h1 id = "textH1">
+      I am from doing hide and seek game
+    </h1>
+      <script>
+        function togglling(){
+          let toggle = document.getElementById("textH1");
+          if(toggle.style.display === "none"){
+            toggle.style.display = "block"
+          } else {
+            toggle.style.display = "none";
+          }
+        }
+      </script>
+  </body>
+</html>
+<-- DOM - documentb object modal
+  //document.getElementById() is a method in javascirpt used to access the html element with a specific ID.
+-->
+
+<!--<!DOCTYPE html>
+<html>
+  <style>
+    .textH1 {
+      display: none;
+    }
+  </style>
+  <body>
+    <h1 class = "textH1">
+      I am doing hide and seek game
+    </h1>
+    <h1 class = "textH1">
+      I am doing hide and seek game
+    </h1>
+    <button onclick="togglling()">Change</button>
+      <script>
+        function togglling(){
+          let toggle = document.getElementsByClassName("textH1");
+          for(let i = 0; i < toggle.length; i++) {
+            if(toggle[i].style.display === "none"){
+              toggle[i].style.display = "block"
+          } else {
+            toggle[i].style.display = "none";
+          }
+          }
+        }
+      </script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    .headingStyle{
+        background-color: aqua;
+        color: black;
+        font-size: 28px;
+    }
+    </style>
+  </head>
+  <body>
+    <h1 class="sampleclass">This is the heading 1</h1>
+    <h2>This is heading 2</h2>
+    <h3 class="sampleclass">This is heading 3</h3>
+    <h4>This is heading 3</h4>
+    <h5 class="sampleclass">This is heading 3</h5>
+    <h6>This is heading 3</h6>
+    <script>
+        let ele = document.getElementsByClassName("sampleclass");
+        for(let i = 0; i < ele.length; i++){
+          ele[i].style.color = "orange";
+        }
+    </script>
+  </body>
+</html> -->
+
+<!--
+  document.getElementByClassName() used to select the HTML elements bases on the class name
+ -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myElement {
+        width: 200px;
+        height: 200px;
+        background-color: goldenrod;
+        /* text-align: center; */
+        display: flex;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+  <div id = "myElement">Hover Me</div>
+  <p id = "hovermsg"></p>
+      <script>
+          let element = document.getElementById("myElement");
+          element.addEventListener("mouseover", function(){
+            document.getElementById("hovermsg").innerText = "mouse over element"
+          });
+          element.addEventListener("mouseout", function(){
+            document.getElementById("hovermsg").innerText = "mouse out element"
+          });
+          element.addEventListener("mousedown", function(){
+            document.getElementById("hovermsg").innerText = "mouse down element"
+          });
+          element.addEventListener("mouseup", function(){
+            document.getElementById("hovermsg").innerText = "mouse up element"
+          });
+          element.addEventListener("mousemove", function(){
+            document.getElementById("hovermsg").innerText = "mouse move element"
+          });
+      </script>
+  </body>
+</html>-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+      <input type = "text" id = "myInput">
+      <h1 id = "focusMesg"></h1>
+      <script>
+        document.getElementById("myInput").addEventListener("focus", function(){
+          document.getElementById("focusMesg").innerText = "the input field is focused"
+        })
+      </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+      <h1 id = "mesg">Loading......</h1>
+      <script>
+        window.addEventListener("load", function(){
+          document.getElementById("mesg").innerText = "page is loaded";
+        })
+      </script>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+      <input type = "text" id = "myInput">
+      <h1 id = "countChar">this is heading</h1>
+      <script>
+        document.getElementById("myInput").addEventListener("input", function(){
+          document.getElementById("countChar").innerText = "counting char :" + this.value.length;
+        })
+      </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+      <div id = "element" style="width: 200px; height: 200px; background-color: yellow;"></div>
+      <script>
+        document.getElementById("element").addEventListener("mouseover", function(){
+          this.style.backgroundColor = "green"
+        })
+      </script>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+      <button id = "mybtn">Click me</button>
+      <script>
+        document.getElementById("mybtn").addEventListener("click", function(){
+          alert("button is clicked")
+        })
+      </script>
+  </body>
+</html>
+<!--
+  Events in javascirpt are the actions that happen in the browser when the user interacts with it
+  click event: triggered when a user clicks on an element, like button or link
+  mouseover event: fired when the mouse pointer enters on the elements
+  keydown event: keyboard key is pressed down while the element is in foucs
+  sumbit
+  change event
+  load event, scoll event, reisize event focus event
+ -->
+
+
+
+
+
+
+
+
+

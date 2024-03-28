@@ -1,0 +1,27 @@
+
+ 
+<!DOCTYPE html>
+<html>
+  <style>
+      .headingStyle{
+        background-color: aqua;
+        color: rgb(0, 0, 0);
+        font-size: 28px;
+    }
+  </style>
+  <body>
+    <h1>This is heading 1 first line</h1>
+    <h1>This is heading 1 second line</h1>
+    <h1>This is heading 1 third line</h1>
+
+      <script>
+        let headerTags = document.getElementsByTagName("h1");
+        for(let i = 0; i < headerTags.length; i++){
+          headerTags[i].style.color = "orange"
+          headerTags[i].style.backgroundColor = "black"
+          headerTags[i].style.fontSize = "19px"
+        }
+
+      </script>
+  </body>
+</html>
